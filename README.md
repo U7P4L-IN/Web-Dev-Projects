@@ -2,7 +2,7 @@
 --------|
 ![](https://media.tenor.com/iVCiM9W7cvYAAAAd/welcome.gif)
 
-# SCIENTIFIC CALCULATOR
+# PROFESSSIONAL CALCULATOR
 <p align="center"><img src="https://github.com/U7P4L-IN/professional-calculator/blob/main/IMG_20230310_194552.jpg">
 
 ### SCIENTIFIC CALCULATOR
