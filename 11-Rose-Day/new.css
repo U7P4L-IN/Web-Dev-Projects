@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", "Quicksand", sans-serif;
+  background: url(background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.postcard {
+  width: 800px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.101);
+
+  margin: 0 auto;
+  border-radius: 2%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+  box-shadow: 0.8em 0.8em 15px rgba(0, 0, 0, 0.3);
+  -ms-transform: rotate(2.5deg); /* IE 9 */
+  -webkit-transform: rotate(2.5deg); /* Chrome, Safari, Opera */
+  transform: rotate(2.5deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.postcard1 {
+  width: 800px;
+  height: 500px;
+  background: #f594b862;
+  position: absolute;
+  left: 24%;
+  -webkit-filter: blur(2px);
+  z-index: -1;
+  margin: 0 auto;
+  border-radius: 2%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+  box-shadow: 0.8em 0.8em 15px rgba(0, 0, 0, 0.3);
+  -ms-transform: rotate(2.5deg); /* IE 9 */
+  -webkit-transform: rotate(2.5deg); /* Chrome, Safari, Opera */
+  transform: rotate(2.5deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.5em;
+  color: #fdfdfd;
+  margin-bottom: 5px;
+}
+
+/*animation*/
+.postcard:hover,
+.postcard:active,
+.postcard:focus {
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mail_stamp {
+  width: 100px;
+  float: right;
+}
+
+.push {
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
+/*footer*/
+footer {
+  margin: 2em auto;
+  text-align: center;
+  font-family: "Varela Round", "Quicksand", sans-serif;
+  color: white;
+}
+
+footer p {
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+p span {
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+  color: #800020;
+}
+p {
+  font-size: 22px;
+  font-family: cursive;
+  font-weight: 540;
+}
+.ullu {
+  font-size: 25px;
+
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+}

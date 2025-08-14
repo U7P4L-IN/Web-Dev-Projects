@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter:700&display=swap");
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #502d24;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.instructions {
+  position: absolute;
+  bottom: 10%;
+
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  text-align: center;
+  font-family: Bitter, sans-serif;
+  color: white;
+}
+
+:root {
+  --brown: #754c28;
+  --brown-light: #bcaea1a4;
+  --brown-dark: #a9a8a8;
+  --brown-darker: #2c241c;
+  --brown-darkz: #000000;
+}
+
+.chocolate-button {
+  /* Reset button styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 10vmin;
+  font-family: Bitter, cursive;
+  cursor: pointer;
+  transform: rotateX(10deg) rotateZ(10deg);
+}
+@media (min-width: 600px) {
+  .chocolate-button {
+    font-size: 60px;
+  }
+}
+.chocolate-button .bar {
+  border-radius: 0.3em;
+  display: block;
+  transition: transform 0.1s ease;
+}
+.chocolate-button .bar:hover,
+.chocolate-button .bar:focus,
+.chocolate-button .bar:active {
+  transform: translateY(0.05em);
+}
+.chocolate-button .bar:before,
+.chocolate-button .bar:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: inherit;
+}
+.chocolate-button .bar:before {
+  background-color: var(--brown);
+  border: 0.35em rgba(117, 76, 40, 0.6) ridge;
+  top: 0;
+  z-index: 0;
+}
+.chocolate-button .bar:after {
+  top: 0.3em;
+  left: 0.3em;
+  background: var(--brown-dark);
+  box-shadow: inset 0 -0.05em var(--brown-darker);
+}
+.chocolate-button .text,
+.chocolate-button .bar:before,
+.chocolate-button .bar:after {
+  transition: -webkit-clip-path 0.15s steps(3, start);
+  transition: clip-path 0.15s steps(3, start);
+  transition: clip-path 0.15s steps(3, start),
+    -webkit-clip-path 0.15s steps(3, start);
+  -webkit-clip-path: polygon(
+    100% 0,
+    100% 100%,
+    calc(30% + var(--x, 0) * 1px) 100%,
+    calc(24% + var(--x, 0) * 1px) 100%,
+    calc(7% + var(--x, 0) * 1px) 100%,
+    calc(0% + var(--x, 0) * 1px) 100%,
+    calc(-6% + var(--x, 0) * 1px) 100%,
+    calc(-20% + var(--x, 0) * 1px) 100%,
+    calc(-30% + var(--x, 0) * 1px) 100%,
+    0 100%,
+    0 0
+  );
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    calc(30% + var(--x, 0) * 1px) 100%,
+    calc(24% + var(--x, 0) * 1px) 100%,
+    calc(7% + var(--x, 0) * 1px) 100%,
+    calc(0% + var(--x, 0) * 1px) 100%,
+    calc(-6% + var(--x, 0) * 1px) 100%,
+    calc(-20% + var(--x, 0) * 1px) 100%,
+    calc(-30% + var(--x, 0) * 1px) 100%,
+    0 100%,
+    0 0
+  );
+}
+.chocolate-button .text {
+  display: block;
+  padding: 1em 0.5em;
+  color: var(--brown-darkz);
+  opacity: 0.8;
+  text-shadow: 1px 2px var(--brown-light), -1px -2px black;
+}
+
+/* ---------------------------------- */
+.crumbs {
+  position: absolute;
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 50%;
+  top: 0;
+  left: calc(var(--x, 0) * 1px);
+  pointer-events: none;
+  opacity: 0;
+}
+.crumbs:before,
+.crumbs:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  box-shadow: -1.7547952103em 1.6770189606em var(--brown),
+    -1.7547952103em 1.6770189606em var(--brown),
+    -2.3011845128em 2.8794398227em var(--brown),
+    -2.3011845128em 2.8794398227em var(--brown),
+    -0.4217394874em 0.0705320589em var(--brown),
+    -0.4217394874em 0.0705320589em var(--brown),
+    -0.1159591693em 0.7704363452em var(--brown),
+    -0.1159591693em 0.7704363452em var(--brown),
+    -2.1492040765em 2.1268170697em var(--brown),
+    -2.1492040765em 2.1268170697em var(--brown),
+    2.4411882244em 0.9208513046em var(--brown),
+    2.4411882244em 0.9208513046em var(--brown),
+    2.1550483899em 1.5017137668em var(--brown),
+    2.1550483899em 1.5017137668em var(--brown),
+    -1.9464615267em 1.4567134934em var(--brown),
+    -1.9464615267em 1.4567134934em var(--brown),
+    -2.8690082426em 2.7340134596em var(--brown),
+    -2.8690082426em 2.7340134596em var(--brown),
+    -1.6327566611em 1.5461441639em var(--brown),
+    -1.6327566611em 1.5461441639em var(--brown),
+    -1.7259157274em 2.7136771803em var(--brown),
+    -1.7259157274em 2.7136771803em var(--brown),
+    -0.9947450354em 2.2508840811em var(--brown),
+    -0.9947450354em 2.2508840811em var(--brown),
+    1.6174468599em 0.1411684513em var(--brown),
+    1.6174468599em 0.1411684513em var(--brown),
+    -1.3639903681em 2.24584453em var(--brown),
+    -1.3639903681em 2.24584453em var(--brown),
+    -1.6694185722em 2.5090191985em var(--brown),
+    -1.6694185722em 2.5090191985em var(--brown),
+    0.3857759081em 1.2122188346em var(--brown),
+    0.3857759081em 1.2122188346em var(--brown),
+    -1.1774451283em 2.1662207765em var(--brown),
+    -1.1774451283em 2.1662207765em var(--brown),
+    -2.1704305823em 1.3741380577em var(--brown),
+    -2.1704305823em 1.3741380577em var(--brown),
+    0.5921977864em 0.6783236635em var(--brown),
+    0.5921977864em 0.6783236635em var(--brown),
+    1.0593329551em 2.6875484967em var(--brown),
+    1.0593329551em 2.6875484967em var(--brown);
+}
+.crumbs:before {
+  height: 70%;
+  width: 70%;
+}
+
+/* ---------------------------------- */
+.chocolate-button:focus,
+.chocolate-button:active {
+  outline: none;
+  -webkit-animation: chomp 0.3s cubic-bezier(0.72, 0.12, 0.32, 0.96);
+  animation: chomp 0.3s cubic-bezier(0.72, 0.12, 0.32, 0.96);
+}
+@-webkit-keyframes chomp {
+  30% {
+    transform: translateZ(-6vmin) rotateX(15deg) rotateZ(12deg);
+  }
+  70% {
+    transform: translateZ(-10vmin) rotateX(0deg) rotateZ(8deg);
+  }
+}
+@keyframes chomp {
+  30% {
+    transform: translateZ(-6vmin) rotateX(15deg) rotateZ(12deg);
+  }
+  70% {
+    transform: translateZ(-10vmin) rotateX(0deg) rotateZ(8deg);
+  }
+}
+.chocolate-button:focus .text,
+.chocolate-button:focus .bar:before,
+.chocolate-button:focus .bar:after,
+.chocolate-button:active .text,
+.chocolate-button:active .bar:before,
+.chocolate-button:active .bar:after {
+  transition: none;
+  -webkit-clip-path: polygon(
+    100% 0,
+    100% 100%,
+    calc(30% + var(--x, 0) * 1px) 100%,
+    calc(24% + var(--x, 0) * 1px) 75%,
+    calc(7% + var(--x, 0) * 1px) 58%,
+    calc(0% + var(--x, 0) * 1px) 65%,
+    calc(-6% + var(--x, 0) * 1px) 45%,
+    calc(-20% + var(--x, 0) * 1px) 51%,
+    calc(-30% + var(--x, 0) * 1px) 100%,
+    0 100%,
+    0 0
+  );
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    calc(30% + var(--x, 0) * 1px) 100%,
+    calc(24% + var(--x, 0) * 1px) 75%,
+    calc(7% + var(--x, 0) * 1px) 58%,
+    calc(0% + var(--x, 0) * 1px) 65%,
+    calc(-6% + var(--x, 0) * 1px) 45%,
+    calc(-20% + var(--x, 0) * 1px) 51%,
+    calc(-30% + var(--x, 0) * 1px) 100%,
+    0 100%,
+    0 0
+  );
+}
+.chocolate-button:focus .crumbs,
+.chocolate-button:active .crumbs {
+  opacity: 1;
+  -webkit-animation: crumbs 1.5s ease-out both;
+  animation: crumbs 1.5s ease-out both;
+}
+@-webkit-keyframes crumbs {
+  to {
+    transform: translateY(100vh);
+  }
+}
+@keyframes crumbs {
+  to {
+    transform: translateY(100vh);
+  }
+}
+.chocolate-button:focus .crumbs:before,
+.chocolate-button:active .crumbs:before {
+  -webkit-animation: inherit;
+  animation: inherit;
+  -webkit-animation-name: crumbs-left;
+  animation-name: crumbs-left;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+}
+@-webkit-keyframes crumbs-left {
+  to {
+    transform: translateX(-15vw) rotate(-5deg);
+  }
+}
+@keyframes crumbs-left {
+  to {
+    transform: translateX(-15vw) rotate(-5deg);
+  }
+}
+.chocolate-button:focus .crumbs:after,
+.chocolate-button:active .crumbs:after {
+  -webkit-animation: inherit;
+  animation: inherit;
+  -webkit-animation-name: crumbs-right;
+  animation-name: crumbs-right;
+}
+@-webkit-keyframes crumbs-right {
+  to {
+    transform: translateX(15vw) rotate(5deg);
+  }
+}
+@keyframes crumbs-right {
+  to {
+    transform: translateX(15vw) rotate(5deg);
+  }
+}

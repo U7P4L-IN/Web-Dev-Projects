@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Tesla hero slider By UtpalCoding</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="root"></div>
+<!-- partial -->
+
+
+
+
+
+
+
+
+<script src="https://www.googletagmanager.com/gtag/js?id=GT-552QH6DG" id="google_gtagjs-js" async></script><script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["codewithshobhit.com"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-552QH6DG");
+</script><script type='text/javascript' src='https://codewithshobhit.com/_jb_static/??-eJyljEEOQDAQAH/jpNbSlh7EW2qtIGkr2kT8ngOJu+tMZuDYBAWf2CcgSzPDsQXhFr9MJ2CDtVIGtQEbI6f4kWJmO/IuJiVlSdgWNy7WmMPfYa0llbqyz7B33VsZk9HQ4QVeMTqz'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9016625147108323"
+     crossorigin="anonymous"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NTCKF6PX');</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9016625147108323&amp;host=ca-host-pub-2644536267352236" crossorigin="anonymous"></script><script>
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-NTCKF6PX' );
+
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9016625147108323"
+     crossorigin="anonymous"></script><script src='https://unpkg.com/react@16/umd/react.development.js'></script><script src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/react-transition-group/2.2.0/react-transition-group.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.1/prop-types.js'></script><script src='https://unpkg.com/lodash@4.17.5/lodash.js'></script><script src='https://unpkg.com/bezier-easing@2.1.0/dist/bezier-easing.min.js'></script><script  src="./script.js"></script><script type="text/javascript">
+
+const downloadBtn = document.querySelector(".download-btn");
+const fileLink = "";
+
+const initTimer = () => {
+if(downloadBtn.classList.contains("disable-timer")) {
+   return location.href = "https://github.com/Codewithshobhit/Tesla-hero-slider-Animation/archive/refs/heads/main.zip";
+}
+let timer = downloadBtn.dataset.timer;
+downloadBtn.classList.add("timer");
+downloadBtn.innerHTML = `Your download will begin in <b>${timer}</b> seconds`;
+const initCounter = setInterval(() => {
+   if(timer > 0) {
+       timer--;
+       return downloadBtn.innerHTML = `Your download will begin in <b>${timer}</b> seconds`;
+   }
+   clearInterval(initCounter);
+   location.href = "https://github.com/Codewithshobhit/Tesla-hero-slider-Animation/archive/refs/heads/main.zip";
+   downloadBtn.innerText = "Your file is downloading...";
+   setTimeout(() => {
+       downloadBtn.classList.replace("timer", "disable-timer");
+       downloadBtn.innerHTML = `<i class='fa fa-download'></i>
+                                <span class="text">Download Again</span>`;
+   }, 3000);
+}, 1000);
+}
+
+downloadBtn.addEventListener("click", initTimer);
+</script><script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script><script>
+            (function () {
+				                const darkModeID = 'RubyDarkMode';
+                const currentMode = navigator.cookieEnabled ? (localStorage.getItem(darkModeID) || 'default') : 'default';
+                const selector = currentMode === 'dark' ? '.mode-icon-dark' : '.mode-icon-default';
+                const icons = document.querySelectorAll(selector);
+                if (icons.length) {
+                    icons.forEach(icon => icon.classList.add('activated'));
+                }
+
+				                const privacyBox = document.getElementById('rb-privacy');
+                const currentPrivacy = navigator.cookieEnabled ? localStorage.getItem('RubyPrivacyAllowed') || '' : '1';
+                if (!currentPrivacy && privacyBox?.classList) {
+                    privacyBox.classList.add('activated');
+                }
+				                const readingSize = navigator.cookieEnabled ? sessionStorage.getItem('rubyResizerStep') || '' : '1';
+                if (readingSize) {
+                    const body = document.querySelector('body');
+                    switch (readingSize) {
+                        case '2':
+                            body.classList.add('medium-entry-size');
+                            break;
+                        case '3':
+                            body.classList.add('big-entry-size');
+                            break;
+                    }
+                }
+            })();
+		</script><script>
+            (function () {
+                let currentMode = null;
+                const darkModeID = 'RubyDarkMode';
+				                currentMode = navigator.cookieEnabled ? localStorage.getItem(darkModeID) || null : 'default';
+                if (!currentMode) {
+					                    currentMode = 'default';
+                    localStorage.setItem(darkModeID, 'default');
+					                }
+                document.body.setAttribute('data-theme', currentMode === 'dark' ? 'dark' : 'default');
+				            })();
+		</script><script type='text/javascript'>
+				const lazyloadRunObserver = () => {
+					const dataAttribute = 'data-e-bg-lazyload';
+					const lazyloadBackgrounds = document.querySelectorAll( `[${ dataAttribute }]:not(.lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+					entries.forEach( ( entry ) => {
+						if ( entry.isIntersecting ) {
+							let lazyloadBackground = entry.target;
+							const lazyloadSelector = lazyloadBackground.getAttribute( dataAttribute );
+							if ( lazyloadSelector ) {
+								lazyloadBackground = entry.target.querySelector( lazyloadSelector );
+							}
+							if( lazyloadBackground ) {
+								lazyloadBackground.classList.add( 'lazyloaded' );
+							}
+							lazyloadBackgroundObserver.unobserve( entry.target );
+						}
+					});
+					}, { rootMargin: '100px 0px 100px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script><script type="text/template" id="bookmark-toggle-template">
+			<i class="rbi rbi-bookmark" aria-hidden="true" data-title="Save it"></i>
+			<i class="bookmarked-icon rbi rbi-bookmark-fill" aria-hidden="true" data-title="Undo Save"></i>
+		</script><script type="text/template" id="bookmark-ask-login-template">
+			<a class="login-toggle" data-title="Sign In to Save" href="https://codewithshobhit.com/wp-login.php?redirect_to=https%3A%2F%2Fcodewithshobhit.com%2Ftesla-hero-slider"><i class="rbi rbi-bookmark" aria-hidden="true"></i></a>
+		</script><script type="text/template" id="follow-ask-login-template">
+			<a class="login-toggle" data-title="Sign In to Follow" href="https://codewithshobhit.com/wp-login.php?redirect_to=https%3A%2F%2Fcodewithshobhit.com%2Ftesla-hero-slider"><i class="follow-icon rbi rbi-plus" aria-hidden="true"></i></a>
+		</script><script type="text/template" id="follow-toggle-template">
+			<i class="follow-icon rbi rbi-plus" data-title="Follow"></i>
+			<i class="followed-icon rbi rbi-bookmark-fill" data-title="Unfollow"></i>
+		</script><script type="text/template" id="bookmark-notification-template">
+				<div class="bookmark-notification-inner {{classes}}">
+					<div class="bookmark-featured">{{image}}</div>
+					<div class="bookmark-inner">
+						<span class="bookmark-title h5">{{title}}</span><span class="bookmark-desc">{{description}}</span>
+					</div>
+				</div>
+			</script><script type="text/template" id="follow-notification-template">
+				<div class="follow-info bookmark-notification-inner {{classes}}">
+					<span class="follow-desc"><span>{{description}}</span><strong>{{name}}</strong></span>
+				</div>
+			</script><script src="https://stats.wp.com/e-202417.js" id="jetpack-stats-js" data-wp-strategy="defer"></script><script id="jetpack-stats-js-after">
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"231702399\",\"post\":\"8175\",\"tz\":\"0\",\"srv\":\"codewithshobhit.com\",\"j\":\"1:13.3.1\"}") ]);
+_stq.push([ "clickTrackerInit", "231702399", "8175" ]);
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js" id="prismjs_core-js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" id="prismjs_loader-js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js" id="prismjs_normalize-js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.js" id="prismjs_line_numbers-js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.js" id="prismjs_toolbar-js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" id="prismjs_copy_to_clipboard-js"></script><script id="wpo_min-footer-0-js-extra">
+var foxizCoreParams = {"ajaxurl":"https:\/\/codewithshobhit.com\/wp-admin\/admin-ajax.php","darkModeID":"RubyDarkMode","cookieDomain":"","cookiePath":"\/"};
+var wpcf7 = {"api":{"root":"https:\/\/codewithshobhit.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+</script><script id="wpo_min-footer-2-js-extra">
+var foxizParams = {"twitterName":"Codewithshobhit","sliderSpeed":"5000","sliderEffect":"slide","sliderFMode":"1","highlightShares":"1","highlightShareFacebook":"1","highlightShareTwitter":"1","highlightShareReddit":"1","singleLoadNextLimit":"20","yesReadingHis":"8175","liveInterval":"600"};
+var uid_28f6f0c = {"uuid":"uid_28f6f0c","name":"grid_box_1","order":"date_posts","posts_per_page":"8","unique":"1","crop_size":"foxiz_crop_g2","entry_category":"bg-4","title_tag":"h4","entry_meta":["like"],"review_meta":"-1","sponsor_meta":"2","bookmark":"1","entry_format":"bottom","box_style":"shadow","pagination":"load_more","paged":"1","page_max":"14","content_source":"related","related_id":"8175","post_not_in":[8175,11044,10730,10584,10080,8723,8513]};
+</script><script type='text/javascript' src='https://codewithshobhit.com/_jb_static/??-eJytzDsOgzAQRdHdpIoZxuOPpkCsxVgeQSRsFFtC7J4UFOmhfVfvwL6pWHJLuUEMcU6wb0WtS17kAPRI1jI6hlBravUvKimlpa8SQ6KD0d1v7j71DXfBMJEmov4xENk6I0SPgb03DtnbCxzX4Xppz684DXgCihBxfQ=='></script><script src="https://codewithshobhit.com/wp-content/cache/wpo-minify/1713559169/assets/wpo-minify-footer-061b11f8.min.js" id="wpo_min-footer-11-js"></script></body>
+</html>

@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  font-family: "Be Vietnam Pro", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+  width: 80%;
+  max-width: 300px;
+  background-color: #1b2028;
+  border-radius: 16px;
+  position: relative;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  text-align: center;
+  color: #f1f3f3;
+  background-image: linear-gradient(
+    135deg,
+    rgba(124, 58, 46, 0.35),
+    rgba(115, 74, 88, 0.1) 15%,
+    #1b2028 20%,
+    #1b2028 100%
+  );
+  margin-top: -3px;
+}
+.profile:hover {
+  filter: drop-shadow(0 0 4px rgb(255, 255, 255));
+}
+.profile:after {
+  content: "";
+  display: block;
+  top: -3px;
+  left: -3px;
+  bottom: -3px;
+  right: -3px;
+  z-index: -1;
+  position: absolute;
+  border-radius: 16px;
+  background-image: linear-gradient(
+    865deg,
+    #152a45,
+    #2c333e 20%,
+    #2c333e 30%,
+    #2c333e 100%
+  );
+}
+
+.profile-image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 175px;
+  height: 175px;
+  position: relative;
+}
+.profile-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.profile-image img:hover {
+  width: 220px;
+}
+.username {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.handle {
+  color: #7d8396;
+  margin-top: -15px;
+}
+a {
+  text-decoration: none;
+}
+.profile-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+.profile-actions > * {
+  margin: 0 0.25rem;
+}
+
+.btn {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+  transition: 0.15s ease;
+}
+.btn--primary {
+  border-radius: 99em;
+  background-color: #3772ff;
+  background-image: linear-gradient(135deg, #5587ff, #3772ff);
+  color: #fff;
+  padding: 0 1.375em;
+}
+.btn:hover {
+  background-color: #1969d8;
+}
+.utpalcoding:hover {
+  background: red;
+  border: 3px solid rgb(255, 255, 255);
+}
+.btn--primary:hover,
+.btn--primary:focus {
+  background-size: 150%;
+}
+.btn--icon {
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  border: 3px solid #343945;
+  color: #0833bf;
+}
+.btn--icon:hover {
+  border-color: #ffffff;
+}
+.profile-links {
+  margin-top: 1.5rem;
+  margin-bottom: -40px;
+}
+.link {
+  text-decoration: none;
+  color: #7d8396;
+}
+.profile-links a {
+  padding: 10px;
+  margin-left: -5px;
+}
+.link i {
+  font-size: 1.25em;
+}
+.profile-links a:hover {
+  font-size: 1.55em;
+  filter: drop-shadow(0 0 4px rgb(12, 62, 212));
+  animation: move 4s linear;
+}
+p:hover {
+  color: #39a416;
+}

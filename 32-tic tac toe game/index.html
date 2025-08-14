@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Manrope&display=swap" rel="stylesheet">
+</head>
+
+<body onload="loadTheGame()">
+  <h1 class="current_player">X</h1>
+  <h1 class="game_over"></h1>
+  <div id="tic_tac_toe"></div>
+  <div id="restart">
+    <button class="new_game" onclick="loadTheGame()">New Game</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

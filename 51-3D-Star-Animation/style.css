@@ -1,0 +1,272 @@
+input {
+    display: none;
+  }
+  
+  #playPause:not(:checked) ~ .scene .set div {
+    animation-play-state: paused;
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+    display: grid;
+    background-color: #000;
+    --screenX: .7;
+    --screenDir: 1vh;
+    font-size: calc(var(--screenX)*var(--screenDir));
+    overflow: hidden;
+  }
+  
+  .scene, .scene * {
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  
+  .scene {
+    place-self: center;
+    perspective: 80em; 
+  }
+  
+  .set div {
+    width: 3em;
+    aspect-ratio: 1;
+    background-color: #fff;
+    box-shadow: 0 0 2vh hsl(calc(var(--step)*30deg) 100% 50%), 0 0 1vh hsl(calc(var(--step)*30deg) 100% 50%);
+    border-radius: 50%;
+  }
+  
+  .twoD .set div {
+    animation: wave 4s linear infinite /*alternate*/;
+    rotate: calc(60deg*var(--quarter) + 5deg*var(--step));
+    --sinBase: -35em;
+    --sinAmp: 10em;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: translateY(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg)));;
+    }
+    12.5% {
+      transform: translateY(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 45deg)));
+    }
+    25% {
+      transform: translateY(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 90deg)));
+    }
+    37.5% {
+      transform: translateY(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 135deg)));
+    }
+    50% {
+      transform: translateY(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 180deg)));
+    }
+    62.5% {
+      transform: translateY(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 225deg)));
+    }
+    75% {
+      transform: translateY(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 270deg)));
+    }
+    87.5% {
+      transform: translateY(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 315deg)));
+    }
+    100% {
+      transform: translateY(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 360deg)));
+    }
+  }
+  
+  .threeD .set div {
+    --placement: rotate(calc(72deg*var(--quarter) + 6deg*var(--step) + 3deg)) translateY(-50em);
+    animation: sway 20s linear infinite backwards;
+    --sinBase: -10em;
+    --sinAmp: 30em;
+  }
+  
+  @keyframes sway {
+    0% {
+      transform: var(--placement) translateZ(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg)));  
+    }
+    12.5% {
+      transform: var(--placement) translateZ(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 45deg)));  
+    }
+    25% {
+      transform: var(--placement) translateZ(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 90deg)));  
+    }
+    37.5% {
+      transform: var(--placement) translateZ(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 135deg)));  
+    }
+    50% {
+      transform: var(--placement) translateZ(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 180deg)));  
+    }
+    62.5% {
+      transform: var(--placement) translateZ(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 225deg)));  
+    }
+    75% {
+      transform: var(--placement) translateZ(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 270deg)));  
+    }
+    87.5% {
+      transform: var(--placement) translateZ(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 315deg)));  
+    }
+    100% {
+      transform: var(--placement) translateZ(calc(var(--sinBase) + var(--sinAmp)*cos(var(--step)*30deg + 360deg)));  
+    }
+  }
+  
+  .set div:nth-child(1) {
+    --step: 0;
+  }
+  
+  .set div:nth-child(2) {
+    --step: 1;
+  }
+  
+  .set div:nth-child(3) {
+    --step: 2;
+  }
+  
+  .set div:nth-child(4) {
+    --step: 3;
+  }
+  
+  .set div:nth-child(5) {
+    --step: 4;
+  }
+  
+  .set div:nth-child(6) {
+    --step: 5;
+  }
+  
+  .set div:nth-child(7) {
+    --step: 6;
+  }
+  
+  .set div:nth-child(8) {
+    --step: 7;
+  }
+  
+  .set div:nth-child(9) {
+    --step: 8;
+  }
+  
+  .set div:nth-child(10) {
+    --step: 9;
+  }
+  
+  .set div:nth-child(11) {
+    --step: 10;
+  }
+  
+  .set div:nth-child(12) {
+    --step: 11;
+  }
+  
+  
+  .set:nth-child(1) div {
+    --quarter: 0;
+  }
+  
+  .set:nth-child(2) div {
+    --quarter: 1;
+  }
+  
+  .set:nth-child(3) div {
+    --quarter: 2;
+  }
+  
+  .set:nth-child(4) div {
+    --quarter: 3;
+  }
+  
+  .set:nth-child(5) div {
+    --quarter: 4;
+  }
+  
+  .set:nth-child(6) div {
+    --quarter: 5;
+  }
+  
+  nav {
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    z-index: 1;
+  }
+  
+  nav, nav * {
+    transition: all .5s ease-in-out;
+  }
+  
+  label {
+    width: max(30em, 100px);
+    aspect-ratio: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    left: 100%;
+    top: 100%;
+    translate: -50% -50%;
+  }
+  
+  .half {
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+  }
+  
+  .half:nth-child(odd) {
+    transform-origin: left;
+    --halfStep: 0;
+  }
+  
+  .half:nth-child(even) {
+    transform-origin: right;
+    --halfStep: 3;
+  }
+  
+  .half div {
+    position: relative;
+    top: calc(8.33%*(var(--step) + var(--halfStep)));
+    height: calc(100% - 16.66%*(var(--step) + var(--halfStep)));
+    width: 0;
+    --borderClr: hsl(calc(60deg*(var(--step) + var(--halfStep)) - 25deg) 100% 50%);
+    border-left:  max(2.5em, 8px) dotted var(--borderClr);
+    filter: drop-shadow(0 0 0em var(--borderClr)) drop-shadow(0 0 0em var(--borderClr)) drop-shadow(0 0 0em var(--borderClr));
+  }
+  
+  label:hover .half div {
+    border-color: #fff;
+    filter: drop-shadow(0 0 3em var(--borderClr)) drop-shadow(0 0 2em var(--borderClr)) drop-shadow(0 0 1em var(--borderClr));
+  }
+  
+  .half div:nth-child(1) {
+    --step: 0;
+  }
+  
+  .half div:nth-child(2) {
+    --step: 1;
+  }
+  
+  .half div:nth-child(3) {
+    --step: 2;
+  }
+  
+  #playPause:checked ~ nav {
+    width: max(20em, 60px);
+    height: max(25em, 60px);
+  }
+  
+  #playPause:checked ~ nav .half {
+    scale: .75 1;
+    filter: hue-rotate(-90deg)
+  }
+  
+  #playPause:checked ~ nav .half div {
+    top: 0;
+    height: 100%;
+    scale: 1.33 1;
+  }
+  
+  
+  
+  @media (orientation: portrait) {
+    body {
+      --screenDir: 1vw;
+    }
+  }

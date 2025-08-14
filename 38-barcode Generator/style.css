@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  padding: 0 10px;
+  min-height: 100vh;
+  align-items: center;
+  background: #000000;
+  justify-content: center;
+}
+.wrapper {
+  height: 265px;
+  max-width: 410px;
+  background: linear-gradient(#ffffff, #48b0dc);
+  border-radius: 7px;
+  padding: 20px 25px 0;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 3px solid white;
+}
+.wrapper.active {
+  height: 530px;
+}
+header h1 {
+  font-size: 21px;
+  font-weight: 900;
+  color: rgb(0, 81, 255);
+}
+
+.wrapper .form {
+  margin: 20px 0 25px;
+}
+.form :where(input, button) {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.1s ease;
+}
+.form input {
+  font-size: 12px;
+  padding: 0 17px;
+  border: 1px solid #999;
+}
+.form input:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+.form input::placeholder {
+  color: #999;
+}
+.form button {
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  background: #3498db;
+}
+.form button:hover {
+  color: #3498db;
+
+  background: #fff;
+}
+.qr-code {
+  opacity: 0;
+  display: flex;
+  padding: 33px 0;
+  border-radius: 5px;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
+.wrapper.active .qr-code {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+.qr-code img {
+  width: 170px;
+}
+
+@media (max-width: 430px) {
+  .wrapper {
+    height: 255px;
+    padding: 16px 20px;
+  }
+  .wrapper.active {
+    height: 510px;
+  }
+
+  .form :where(input, button) {
+    height: 52px;
+  }
+  .qr-code img {
+    width: 160px;
+  [git clone https://github.com/ASHWIN990/ADB-Toolkit.git]
+Receiving objects:   4% (408/10200), 204.01 KiB | 392.00 KiBReceiving objects:   5% (510/10200), 204.01 KiB | 392.00 KiBReceiving objects:   6% (612/10200), 204.01 KiB | 392.00 KiBReceiving objects:   7% (714/10200), 204.01 KiB | 392.00 KiBReceiving objects:   8% (816/10200), 204.01 KiB | 392.00 KiBReceiving objects:   9% (918/10200), 204.01 KiB | 392.00 KiBReceiving objects:  10% (1020/10200), 204.01 KiB | 392.00 KiReceiving objects:  10% (1106/10200), 436.01 KiB | 423.00 KiReceiving objects:  11% (1122/10200), 436.01 KiB | 423.00 KiReceiving objects:  12% (1224/10200), 436.01 KiB | 423.00 KiReceiving objects:  13% (1326/10200), 436.01 KiB | 423.00 KiReceiving objects:  14% (1428/10200), 436.01 KiB | 423.00 KiReceiving objects:  15% (1530/10200), 436.01 KiB | 423.00 KiReceiving objects:  16% (1632/10200), 436.01 KiB | 423.00 KiReceiving objects:  17% (1734/10200), 436.01 KiB | 423.00 KiReceiving objects:  18% (1836/10200), 436.01 KiB | 423.00 KiReceiving objects:  19% (1938/10200), 436.01 KiB | 423.00 KiReceiving objects:  20% (2040/10200), 436.01 KiB | 423.00 KiReceiving objects:  21% (2142/10200), 436.01 KiB | 423.00 KiReceiving objects:  22% (2244/10200), 436.01 KiB | 423.00 KiReceiving objects:  23% (2346/10200), 436.01 KiB | 423.00 KiReceiving objects:  24% (2448/10200), 436.01 KiB | 423.00 KiReceiving objects:  25% (2550/10200), 716.01 KiB | 463.00 KiReceiving objects:  25% (2556/10200), 716.01 KiB | 463.00 KiReceiving objects:  26% (2652/10200), 980.01 KiB | 475.00 KiReceiving objects:  27% (2754/10200), 980.01 KiB | 475.00 KiReceiving objects:  28% (2856/10200), 980.01 KiB | 475.00 KiReceiving objects:  29% (2958/10200), 980.01 KiB | 475.00 KiReceiving objects:  30% (3060/10200), 980.01 KiB | 475.00 KiReceiving objects:  31% (3162/10200), 980.01 KiB | 475.00 KiReceiving objects:  32% (3264/10200), 1.21 MiB | 480.00 KiB/Receiving objects:  33% (3366/10200), 1.21 MiB | 480.00 KiB/Receiving objects:  34% (3468/10200), 1.21 MiB | 480.00 KiB/Receiving objects:  35% (3570/10200), 1.21 MiB | 480.00 KiB/Receiving objects:  36% (3672/10200), 1.21 MiB | 480.00 KiB/Receiving objects:  37% (3774/10200), 1.21 MiB | 480.00 KiB/Receiving objects:  37% (3857/10200), 1.21 MiB | 480.00 KiB/Receiving objects:  38% (3876/10200), 1.21 MiB | 480.00 KiB/Receiving objects:  39% (3978/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  40% (4080/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  41% (4182/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  42% (4284/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  43% (4386/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  44% (4488/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  45% (4590/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  46% (4692/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  47% (4794/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  48% (4896/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  49% (4998/10200), 1.54 MiB | 507.00 KiB/Receiving objects:  50% (5100/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  51% (5202/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  52% (5304/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  53% (5406/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  54% (5508/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  55% (5610/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  56% (5712/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  57% (5814/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  58% (5916/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  59% (6018/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  60% (6120/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  61% (6222/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  62% (6324/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  63% (6426/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  64% (6528/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  64% (6589/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  65% (6630/10200), 1.94 MiB | 548.00 KiB/Receiving objects:  66% (6732/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  67% (6834/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  68% (6936/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  69% (7038/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  70% (7140/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  71% (7242/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  72% (7344/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  73% (7446/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  74% (7548/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  75% (7650/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  76% (7752/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  77% (7854/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  78% (7956/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  79% (8058/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  80% (8160/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  81% (8262/10200), 2.29 MiB | 563.00 KiB/Receiving objects:  82% (8364/10200), 2.51 MiB | 546.00 KiB/Receiving objects:  82% (8428/10200), 2.51 MiB | 546.00 KiB/Receiving objects:  83% (8466/10200), 2.51 MiB | 546.00 KiB/Receiving objects:  84% (8568/10200), 2.60 MiB | 467.00 KiB/Receiving objects:  85% (8670/10200), 2.60 MiB | 467.00 KiB/Receiving objects:  86% (8772/10200), 2.60 MiB | 467.00 KiB/Receiving objects:  86% (8820/10200), 2.60 MiB | 467.00 KiB/Receiving objects:  87% (8874/10200), 2.60 MiB | 467.00 KiB/Receiving objects:  88% (8976/10200), 2.60 MiB | 467.00 KiB/Receiving objects:  89% (9078/10200), 2.60 MiB | 467.00 KiB/Receiving objects:  90% (9180/10200), 2.60 MiB | 467.00 KiB/Receiving objects:  91% (9282/10200), 3.01 MiB | 504.00 KiB/Receiving objects:  92% (9384/10200), 3.01 MiB | 504.00 KiB/Receiving objects:  93% (9486/10200), 3.01 MiB | 504.00 KiB/Receiving objects:  94% (9588/10200), 3.01 MiB | 504.00 KiB/Receiving objects:  95% (9690/10200), 3.01 MiB | 504.00 KiB/Receiving objects:  96% (9792/10200), 3.25 MiB | 496.00 KiB/Receiving objects:  97% (9894/10200), 3.25 MiB | 496.00 KiB/Receiving objects:  97% (9940/10200), 3.25 MiB | 496.00 KiB/Receiving objects:  98% (9996/10200), 3.25 MiB | 496.00 KiB/Receiving objects:  99% (10098/10200), 3.25 MiB | 496.00 KiB
+[diagram-flashing unknown part-1209
+]Receiving objects:  71% (424/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  72% (430/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  73% (436/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  74% (442/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  75% (447/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  76% (453/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  77% (459/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  78% (465/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  79% (471/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  80% (477/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  81% (483/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  82% (489/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  83% (495/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  84% (501/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  85% (507/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  86% (513/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  87% (519/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  88% (525/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  89% (531/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  90% (537/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  91% (543/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  92% (549/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  93% (555/596), 1012.01 KiB | 985.00 KiB/remote: Total 596 (delta 73), reused 142 (delta 55), pack-reused 427
+Receiving objects:  94% (561/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  95% (567/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  96% (573/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  97% (579/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  98% (585/596), 1012.01 KiB | 985.00 KiB/Receiving objects:  99% (591/596), 1012.01 KiB | 985.00 KiB/Receiving objects: 100% (596/596), 1012.01 KiB | 985.00 KiB/Receiving objects: 100% (596/596), 1.44 MiB | 1.21 MiB/s, do

@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#home {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://i.postimg.cc/c4kmCsF1/people-2597454-640.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.16);
+  background-blend-mode: overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+
+  animation-name: bg-change;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+
+  overflow: hidden;
+}
+
+@keyframes bg-change {
+  from {
+    background-image: url(https://i.postimg.cc/mDfh5hKD/couple-silhouette-sunset-scenery-digital-art-4k-wallpaper-uhdpaper-com-777-0-i.jpg);
+  }
+
+  to {
+    background-image: url(https://i.postimg.cc/8PLvQNxn/couple-silhouette-sunset-digital-art-4k-wallpaper-uhdpaper-com-222-0-g.jpg);
+  }
+}
+
+.home_section {
+  width: 80%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/**************/
+
+#container {
+  width: 30vw;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: Beat 2s ease infinite alternate;
+
+  position: absolute;
+  left: 35%;
+  top: -7%;
+}
+#container a {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-family: cursive;
+}
+#container span {
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 10px;
+  padding-top: 100px;
+}
+.left {
+  background-color: red;
+  height: 12vw;
+  aspect-ratio: 1/1.5;
+  border-radius: 50% 50% 0% 0%;
+  rotate: -47deg;
+  translate: 30%;
+}
+.right {
+  background-color: red;
+  height: 12vw;
+  aspect-ratio: 1/1.5;
+  border-radius: 50% 50% 0% 0%;
+  rotate: 47deg;
+  translate: -30%;
+}
+@keyframes Beat {
+  0% {
+    transform: scale(120%);
+    filter: drop-shadow(10px 10px 6px #f00606);
+  }
+  40% {
+    transform: scale(100%);
+    filter: drop-shadow(10px 10px 60px #f00606);
+  }
+  100% {
+    transform: scale(120%);
+    filter: drop-shadow(10px 10px 90px #f00606);
+  }
+}
+
+h2 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+  font-weight: 900;
+  white-space: nowrap;
+  bottom: 8%;
+  text-align: center;
+  animation: flicker 0.5s ease-in-out infinite alternate;
+}
+@keyframes flicker {
+  0% {
+    opacity: 0.8;
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 2px 2px 20px rgb(255, 0, 0);
+  }
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: cursive;
+  letter-spacing: 7px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 30%;
+}
+h1 span {
+  transition: 0.2s linear;
+}
+h1:hover span:nth-child(1) {
+  margin-right: 5px;
+}
+h1:hover span:nth-child(1):after {
+  content: "💖";
+}
+h1:hover span:nth-child(2) {
+  margin-left: 30px;
+}
+h1:hover span {
+  color: #fff;
+  text-shadow: 0 0 10px #da2626, 0 0 20px #e74343, 0 0 40px #fff;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  h2,
+  p {
+    font-size: 10px;
+  }
+  .left {
+    height: 22vw;
+  }
+  .right {
+    height: 22vw;
+  }
+}

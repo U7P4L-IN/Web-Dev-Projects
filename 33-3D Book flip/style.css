@@ -1,0 +1,183 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: #264653;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.centered {
+  margin: auto;
+  width: max-content;
+}
+
+.flipbook {
+  margin: 3em auto;
+  width: 500px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.flipbook .leaf {
+  position: absolute;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 50%;
+  background-color: #fff;
+  left: 50%;
+  transition: transform 1s;
+  transform: rotate3d(0, 1, 0, 0deg);
+  transform-origin: left 0px;
+}
+.flipbook .leaf .page {
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.flipbook .leaf .page.front {
+  transform: rotate3d(0, 1, 0, 0deg) translate3d(0, 0, 0.1px);
+}
+.flipbook .leaf .page.front:not(.external) {
+  box-shadow: inset 5px 0px 5px -5px #0005;
+}
+.flipbook .leaf .page.back {
+  transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 0.1px);
+}
+.flipbook .leaf .page.back:not(.external) {
+  box-shadow: inset -5px 0px 5px -5px #0005;
+}
+.disabled {
+  user-select: none;
+  opacity: 0.6;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  padding: 0em !important;
+  padding-top: 2em;
+}
+
+.page {
+  padding: 1em;
+}
+.page.front {
+  border-radius: 0em 1em 1em 0;
+}
+.page.back {
+  border-radius: 1em 0em 0em 1em;
+}
+
+.leaf {
+  background-color: #0000 !important;
+}
+
+.pageNumber {
+  font-size: 0.95em;
+  position: absolute;
+  bottom: 0.5em;
+}
+
+.front .pageNumber {
+  right: 0.75em;
+}
+
+.back .pageNumber {
+  left: 0.75em;
+}
+
+.contents-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.contents-row .spacer {
+  flex: 1 1;
+  height: 1em;
+  border-bottom: 1px dashed #000;
+}
+.contents-row .text {
+  flex: 0 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: cursive;
+}
+
+body[onload] {
+  /*Cheesing the preview*/
+  transform: scale(1.5);
+  transform-origin: center top;
+}
+body[onload] .leaf:nth-child(1) {
+  transform: rotate3d(0, 1, 0, -128deg) !important;
+}
+body[onload] .leaf:nth-child(2) {
+  transform: rotate3d(0, 1, 0, -70deg) !important;
+}
+body[onload] .leaf:nth-child(3) {
+  transform: rotate3d(0, 1, 0, -40deg) !important;
+}
+body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
+  background-color: #e76f51;
+}
+
+.button1 {
+  text-decoration: none;
+  position: relative;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  color: #fff;
+  width: 9em;
+  height: 3em;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 300%;
+  border-radius: 30px;
+  z-index: 1;
+}
+.button1:hover {
+  animation: ani 8s linear infinite;
+  border: none;
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+.button1:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+}
+
+.button1:hover::before {
+  filter: blur(20px);
+}
+
+.button1:active {
+  background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+}

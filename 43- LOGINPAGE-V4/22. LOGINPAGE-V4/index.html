@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Login Switch</title>
+</head>
+<body>
+  <div class="signUp">
+    <form action="">
+     <h3>Sign Up</h3>
+     <h5>Already have an Account?  <a href="#" id="aha">Sign in</a></h5>
+      <div class="inputBox">
+       <!-- FOR EMAIL -->
+        <label for="email">Email ID* </label>
+        <input type="email"  id="email" placeholder="made by @ii.bbs">
+        
+        <!-- FOR FIRST AND LAST NAME -->
+        <div class="fornameInput">
+        <div class="fname">
+        <label for="fname">First Name*</label>
+        <input type="text" id="fname">
+        </div>
+        <div class="lname">
+        <label for="lname">Last Name*</label>
+        <input type="text"  id="lname">
+        </div>
+        </div>
+         <!-- FOR PHONE NUMBER  -->
+        <label for="phone">Phone</label>
+        <input type="tel"  id="phone"  maxlength="10">
+        <!-- FOR PASSWORD -->
+        <label for="pass">Password* </label>
+        <input type="password"  id="pass">
+      </div>
+    
+       <!-- FOR TERMS AND CONDITIONS  -->
+       <div class="terms">
+       <input type="radio" id="radio">
+       <p>Accept all <a href="https://help.instagram.com/581066165581870">Terms & Conditions</a></p>
+       </div>
+       </form>
+       <!-- FOR SIGN UP BUTTON -->
+        <button id="signUpbtn">Sign Up</button> 
+  </div>
+     
+   <!-- FOR SIGN IN PAGE -->
+     <div class="signIn">
+      <form action="">
+      <h3>Sign In</h3>
+      <h5>I don't Have An Account?  <a href="#"  id="nhcaa">Create An Account</a></h5>
+  
+      <div class="inputBox">
+       <!-- FOR EMAIL -->
+        <label for="email">Email ID* </label>
+        <input type="email" id="email">
+        
+        <!-- FOR PHONE NUMBER  -->
+        <label for="pass">Password</label>
+        <input type="password"  id="pass"> 
+      <!-- FOR FORGET PASSWORD  -->
+       <p><a href="#" id="frgtLink">Forget Password</a></p>
+       </form>
+        <!-- FOR SIGN UP BUTTON -->
+        <button id="signInbtn">Sign In</button>
+
+     </div>
+   </div>
+    
+    
+    <!-- FOR FORGET BUTTON -->
+    <div class="frgtPage">
+         <h3>Forget Password</h3>
+          <h5>No I Remember? <mark>Go back</mark></h5>
+        <form action="#">
+           <div class="inputBox">
+          <label for="email">Enter Email*</label>
+          <input type="email" id="email">
+          <label for="otp">Enter OTP*</label>
+          <input type="tel" id="otp" maxlength="6">
+         
+          <label for="pass">New Password*</label>
+          <input type="password" id="pass">
+          
+          <label for="pass">New Password confirmation*</label>
+          <input type="password" id="passC">
+          </div>
+          </form>
+          <button id="resetBtn">Reset Password</buttonid>
+
+   
+
+    </div>
+ 
+ 
+   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

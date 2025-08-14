@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="userInput">
+            <h1>From</h1>
+            <select name="from" class="unitSelect" id="inputType">
+                <option value="kilogram" selected>Kilograms</option>
+                <option value="gram">Grams</option>
+                <option value="milligram">Milligrams</option>
+                <option value="pounds">Pounds</option>
+                <option value="decigram">Decigrams</option>
+            </select>
+            <input type="text" id="input" placeholder="input" required>
+        </div>
+        <div class="result">
+            <h1>To</h1>
+            <select name="to" class="unitSelect" id="resultType">
+                <option value="kilogram">Kilograms</option>
+                <option value="gram" selected>Grams</option>
+                <option value="milligram">Milligrams</option>
+                <option value="pounds">Pounds</option>
+                <option value="decigram">Decigrams</option>
+            </select>
+            <input type="text" id="result" placeholder="result" disabled>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
